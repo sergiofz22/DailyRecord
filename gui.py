@@ -70,32 +70,32 @@ def guardar_datos():
         {
             "Iniciales": iniciales,
             "Fecha": fecha,
-            "Tipo": "Taller",
-            "Detalle": entry_taller.get(),
+            "Tipo": "ocupacion1",
+            "Detalle": entry_ocupacion1.get(),
             "Informes2": "",
             "TiempoEsperado":"",
             "Eficiencia":"",
-            "Observaciones": entry_taller3.get()
+            "Observaciones": entry_ocupacion13.get()
         },
         {
             "Iniciales": iniciales,
             "Fecha": fecha,
             "Tipo": "Almacén",
-            "Detalle": entry_almacen.get(),
+            "Detalle": entry_ocupacion2.get(),
             "Informes2": "",
             "TiempoEsperado":"",
             "Eficiencia":"",
-            "Observaciones": entry_almacen3.get()
+            "Observaciones": entry_ocupacion23.get()
         },
         {
             "Iniciales": iniciales,
             "Fecha": fecha,
-            "Tipo": "Salidas",
-            "Detalle": entry_salidas.get(),
+            "Tipo": "ocupacion3",
+            "Detalle": entry_ocupacion3.get(),
             "Informes2": "",
             "TiempoEsperado":"",
             "Eficiencia":"",
-            "Observaciones": entry_salidas3.get()
+            "Observaciones": entry_ocupacion33.get()
         },
         {
             "Iniciales": iniciales,
@@ -149,7 +149,7 @@ def guardar_datos():
     cancelar()
 
 def validar_datos():
-    for entry in [entry_informes, entry_taller, entry_almacen, entry_salidas, entry_otros]:
+    for entry in [entry_informes, entry_ocupacion1, entry_ocupacion2, entry_ocupacion3, entry_otros]:
         try:
             if entry.get() != "":
                 float(entry.get())
@@ -188,12 +188,12 @@ def borrar_campos():
     entry_informes.delete(0, tk.END)
     entry_informes2.delete(0, tk.END)
     entry_informes3.delete(0, tk.END)
-    entry_taller.delete(0, tk.END)
-    entry_taller3.delete(0, tk.END)
-    entry_almacen.delete(0, tk.END)
-    entry_almacen3.delete(0, tk.END)
-    entry_salidas.delete(0, tk.END)
-    entry_salidas3.delete(0, tk.END)
+    entry_ocupacion1.delete(0, tk.END)
+    entry_ocupacion13.delete(0, tk.END)
+    entry_ocupacion2.delete(0, tk.END)
+    entry_ocupacion23.delete(0, tk.END)
+    entry_ocupacion3.delete(0, tk.END)
+    entry_ocupacion33.delete(0, tk.END)
     entry_otros.delete(0, tk.END)
     entry_otros3.delete(0, tk.END)
 
@@ -217,10 +217,10 @@ def load_image(file_path):
                 return photo_image
             
 def main():
-    global window, entry_iniciales, entry_fecha, entry_informes, entry_informes2, entry_informes3, entry_taller, entry_taller3, entry_almacen, entry_almacen3, entry_salidas, entry_salidas3, entry_otros, entry_otros3
+    global window, entry_iniciales, entry_fecha, entry_informes, entry_informes2, entry_informes3, entry_ocupacion1, entry_ocupacion13, entry_ocupacion2, entry_ocupacion23, entry_ocupacion3, entry_ocupacion33, entry_otros, entry_otros3
 #Ventana principal
     window = customtkinter.CTk()
-    window.title("GDES Wind S.L.")
+    window.title("Titulo")
     window.iconbitmap(r"path")
     window.geometry("700x550")
     window.configure(bg = "#FFFF")
@@ -238,7 +238,7 @@ def main():
         relief = "ridge"
     )
 
-#Cargar imagen GDES Wind
+#Cargar imagen
 
     image = Image.open(r"path")
     image = image.resize( (205,82), Image.LANCZOS)
@@ -289,7 +289,7 @@ def main():
                                           dropdown_fg_color= "#0E2E5E",
                                           text_color= "#0E2E5E",
                                           text_color_disabled= "#D9D9D9",
-                                          values=['SFT', 'LPG', 'JRA', 'HFS', 'JBB', 'TGS'],
+                                          values=['I01', 'I02', 'I03', 'I04', 'I05', 'I06'],
                                           command=combobox_callback,
                                           variable=combobox_var
                                           )
@@ -414,18 +414,18 @@ def main():
     entry_informes3.place(x=590, y=266, anchor=tk.CENTER)
     entry_informes3.get()
 
-#TALLER
+#Ocupacion 1
     canvas.create_text(
         33.0,
         301.0,
         anchor="nw",
-        text="Taller:",
+        text="Ocupacion 1:",
         fill="#0E2E5E",
         font=("KleeOne Regular", 13 * -1)
     )
 
     #--Tiempo
-    entry_taller = customtkinter.CTkEntry(window,
+    entry_ocupacion1 = customtkinter.CTkEntry(window,
                                 height=23,
                                 width=93,
                                 font=("KleeOne Regular", 13 * -1),
@@ -435,11 +435,11 @@ def main():
                                 fg_color= "#D9D9D9",
                                 text_color= "#0E2E5E",
                                 )
-    entry_taller.place(x=234, y=309, anchor=tk.CENTER)
-    entry_taller.get()
+    entry_ocupacion1.place(x=234, y=309, anchor=tk.CENTER)
+    entry_ocupacion1.get()
 
     #--observaciones
-    entry_taller3 = customtkinter.CTkEntry(window,
+    entry_ocupacion13 = customtkinter.CTkEntry(window,
                                 height=23,
                                 width=93,
                                 font=("KleeOne Regular", 13 * -1),
@@ -449,10 +449,10 @@ def main():
                                 fg_color= "#D9D9D9",
                                 text_color= "#0E2E5E",
                                 )
-    entry_taller3.place(x=590, y=307, anchor=tk.CENTER)
-    entry_taller3.get()
+    entry_ocupacion13.place(x=590, y=307, anchor=tk.CENTER)
+    entry_ocupacion13.get()
 
-#ALMACEN
+#Ocupacion 2
     canvas.create_text(
         33.0,
         346.0,
@@ -462,7 +462,7 @@ def main():
         font=("KleeOne Regular", 13 * -1)
     )
     #--Tiempo[h]
-    entry_almacen = customtkinter.CTkEntry(window,
+    entry_ocupacion2 = customtkinter.CTkEntry(window,
                                 height=23,
                                 width=93,
                                 font=("KleeOne Regular", 13 * -1),
@@ -472,11 +472,11 @@ def main():
                                 fg_color= "#D9D9D9",
                                 text_color= "#0E2E5E",
                                 )
-    entry_almacen.place(x=234, y=353, anchor=tk.CENTER)
-    entry_almacen.get()
+    entry_ocupacion2.place(x=234, y=353, anchor=tk.CENTER)
+    entry_ocupacion2.get()
 
     #--Observaciones
-    entry_almacen3 = customtkinter.CTkEntry(window,
+    entry_ocupacion23 = customtkinter.CTkEntry(window,
                                 height=23,
                                 width=93,
                                 font=("KleeOne Regular", 13 * -1),
@@ -486,21 +486,21 @@ def main():
                                 fg_color= "#D9D9D9",
                                 text_color= "#0E2E5E",
                                 )
-    entry_almacen3.place(x=590, y=353, anchor=tk.CENTER)
-    entry_almacen3.get()
+    entry_ocupacion23.place(x=590, y=353, anchor=tk.CENTER)
+    entry_ocupacion23.get()
 
-#SALIDAS
+#Ocupacion 3
     canvas.create_text(
         33.0,
         391.0,
         anchor="nw",
-        text="Salidas:",
+        text="ocupacion3:",
         fill="#0E2E5E",
         font=("KleeOne Regular", 13 * -1)
     )
 
     #--tiempo[h]
-    entry_salidas = customtkinter.CTkEntry(window,
+    entry_ocupacion3 = customtkinter.CTkEntry(window,
                                 height=23,
                                 width=93,
                                 font=("KleeOne Regular", 13 * -1),
@@ -510,11 +510,11 @@ def main():
                                 fg_color= "#D9D9D9",
                                 text_color= "#0E2E5E",
                                 )
-    entry_salidas.place(x=234, y=397, anchor=tk.CENTER)
-    entry_salidas.get()
+    entry_ocupacion3.place(x=234, y=397, anchor=tk.CENTER)
+    entry_ocupacion3.get()
 
     #--observaciones
-    entry_salidas3 = customtkinter.CTkEntry(window,
+    entry_ocupacion33 = customtkinter.CTkEntry(window,
                                 height=23,
                                 width=93,
                                 font=("KleeOne Regular", 13 * -1),
@@ -524,8 +524,8 @@ def main():
                                 fg_color= "#D9D9D9",
                                 text_color= "#0E2E5E",
                                 )
-    entry_salidas3.place(x=590, y=397, anchor=tk.CENTER)
-    entry_salidas3.get()
+    entry_ocupacion33.place(x=590, y=397, anchor=tk.CENTER)
+    entry_ocupacion33.get()
 
 #OTROS
     canvas.create_text(
