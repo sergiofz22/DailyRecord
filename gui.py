@@ -457,7 +457,7 @@ def main():
         33.0,
         346.0,
         anchor="nw",
-        text="Almacén",
+        text="Ocupación 2",
         fill="#0E2E5E",
         font=("KleeOne Regular", 13 * -1)
     )
@@ -532,7 +532,7 @@ def main():
         33.0,
         436.0,
         anchor="nw",
-        text="Otros:",
+        text="Ocupación 3:",
         fill="#0E2E5E",
         font=("KleeOne Regular", 13 * -1)
     )
