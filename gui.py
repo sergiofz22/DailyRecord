@@ -28,8 +28,13 @@ def calcular_tiempo_esperado(informesRealizados):
         }
     
     for grupo in informes:
-        valor_numerico = float(grupo[:-1]) if grupo[:-1].replace('.', '').isdigit() else 1.0
-        letra = grupo[-1]
+        if grupo.endswith('an'):
+            valor_numerico = float(grupo[:-2]) if grupo[:-2].replace('.', '').isdigit() else 1.0
+            letra = 'an'
+        else:
+            valor_numerico = float(grupo[:-1]) if grupo[:-1].replace('.', '').isdigit() else 1.0
+            letra = grupo[-1]
+        
         tiempo_esperado += valor_numerico * objetivo_por_tipo[letra]
     
     return tiempo_esperado
