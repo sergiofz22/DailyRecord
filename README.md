@@ -25,19 +25,7 @@ El programa proporciona una interfaz gráfica intuitiva para gestionar registros
 
 Asegúrate de que los recursos (imágenes y archivo Excel) estén organizados como se muestra a continuación:
 
-proyecto/
-├── main.py
-├── requirements.txt
-├── assets/
-│   ├── images/
-│   │   ├── image.ico
-│   │   ├── image2.png
-│   ├── frame0/
-│       ├── button_1.png
-│       ├── button_2.png
-│       ├── button_3.png
-├── data/
-│   └── registro.xlsx
+![Sin título](https://github.com/user-attachments/assets/08dc5989-6ab6-4e0e-8c55-0dda1ecb667d)
 
 ---
 
