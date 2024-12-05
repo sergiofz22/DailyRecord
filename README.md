@@ -93,16 +93,6 @@ Instala todas las dependencias ejecutando:
 
 pip install -r requirements.txt
 
-
-
-Aquí tienes un archivo README.md completo con toda la información detallada de tu proyecto:
-
-markdown
-
-# Registro Diario de Actividades con Tkinter
-
-Esta es una aplicación de escritorio desarrollada en Python que permite a los usuarios registrar actividades diarias, calcular tiempos esperados y eficiencias, y guardar los datos en un archivo Excel. Está diseñada para facilitar el seguimiento y la organización de tareas laborales.
-
 ---
 
 ✨ Personalización
