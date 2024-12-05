@@ -95,7 +95,7 @@ pip install -r requirements.txt
 
 ---
 
-✨ Personalización
+##   ✨ Personalización
 Puedes personalizar:
 
 Diseño de la interfaz: Modifica colores, fuentes y diseño en el código.
@@ -103,7 +103,7 @@ Recursos gráficos: Reemplaza las imágenes en la carpeta assets/.
 
 ---
 
-🛠️ Generación del Ejecutable
+##   🛠️ Generación del Ejecutable
 Instala PyInstaller:
 
 pyinstaller --onefile --noconsole main.py
@@ -112,7 +112,7 @@ El archivo ejecutable estará en la carpeta dist.
 
 ---
 
-🛡️ Licencia
+##   🛡️ Licencia
 Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
 
 
