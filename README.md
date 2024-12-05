@@ -113,6 +113,6 @@ El archivo ejecutable estará en la carpeta dist.
 ---
 
 ##   🛡️ Licencia
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+Este proyecto está bajo la Licencia MIT.
 
 
