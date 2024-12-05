@@ -36,7 +36,9 @@ Asegúrate de que los recursos (imágenes y archivo Excel) estén organizados co
    git clone https://github.com/sergiofz22/DailyRecord.git
    cd DailyRecord
 
-Instala las dependencias: Asegúrate de tener Python 3.8 o superior instalado. Luego, instala las dependencias:
+Instala las dependencias: 
+
+Asegúrate de tener Python 3.8 o superior instalado
 
 pip install -r requirements.txt
 
