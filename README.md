@@ -86,12 +86,14 @@ Guarda automáticamente los datos en un archivo Excel en la carpeta data.
 
 ##  🧩 Dependencias
 Bibliotecas necesarias:
+
 pathlib
 tkinter
 customtkinter
 pandas
 openpyxl
 Pillow
+
 Instala todas las dependencias ejecutando:
 
 pip install -r requirements.txt
