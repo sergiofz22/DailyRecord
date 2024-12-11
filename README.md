@@ -66,15 +66,16 @@ Si los datos son válidos, se calculará la eficiencia y se mostrarán mensajes 
 ##  📊 Funcionalidades Clave
 1. Registro de Actividades
 Permite registrar:
-
 Iniciales del usuario.
 Fecha en formato DD/MM/AAAA.
 Tareas diarias divididas en categorías (informes, ocupación, otros).
 Observaciones para cada actividad.
+
 2. Validación
 Tiempo: Los campos de tiempo deben ser valores numéricos.
 Fecha: Validación del formato y que no sean fechas futuras.
 Tareas: Solo se permiten valores específicos como `a`, `b`, `c` (o sus múltiplos).
+
 3. Cálculo de Eficiencia
 Compara el tiempo esperado con el tiempo real para calcular la eficiencia en porcentaje.
 
