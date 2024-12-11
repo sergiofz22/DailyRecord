@@ -74,7 +74,7 @@ Observaciones para cada actividad.
 2. Validación
 Tiempo: Los campos de tiempo deben ser valores numéricos.
 Fecha: Validación del formato y que no sean fechas futuras.
-Tareas: Solo se permiten valores específicos como `a`, `b`, `c`, `an` (o sus múltiplos).
+Tareas: Solo se permiten valores específicos como `a`, `b`, `c` (o sus múltiplos).
 3. Cálculo de Eficiencia
 Compara el tiempo esperado con el tiempo real para calcular la eficiencia en porcentaje.
 
